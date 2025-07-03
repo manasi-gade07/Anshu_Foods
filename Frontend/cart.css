@@ -1,0 +1,54 @@
+
+  
+  .box
+  {
+  margin: 60px 40px;
+  
+  
+  }
+ 
+
+  .btn, .remove-btn {
+    background-color: #7C0000;
+    color: white;
+    width: 50%; /* Ensures both buttons take up 50% of the width */
+    text-transform: capitalize;
+    font-style: oblique;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover, .remove-btn:hover {
+    background-color: white;
+    color: #7C0000;
+  }
+  
+  .remove-btn {
+    background-color: #7C0000; /* Red color for Remove button */
+  }
+  
+  .remove-btn:hover {
+    background-color:white;
+    color: #7C0000; 
+  }
+  
+  .button-container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+  }
+  
+  .empty-cart-message {
+     /* Add your desired margin */
+    margin: 40px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #7C0000;
+  }
+  

@@ -1,0 +1,89 @@
+.about-us {
+    padding: 60px 5%;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .about-us h2 {
+    color:#7C0000;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .about-us h4 {
+    color: #444;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .about-us p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .about-us ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .about-us ul li {
+    margin-bottom: 10px;
+  }
+  
+  .about-us .img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us .fw-semibold {
+    font-weight: 600;
+  }
+  
+  .about-us .text-primary {
+    color: #7C0000!important;
+  }
+  
+  .about-us .btn {
+    background-color: #7C0000;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .about-us .btn:hover {
+    background-color: white;
+    color: #7C0000;
+    text-decoration: none;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .about-us .row {
+      flex-direction: column;
+    }
+  
+    .about-us .col-lg-6,
+    .about-us .col {
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+  
+    .about-us .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

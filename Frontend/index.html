@@ -1,12 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anshu Foods</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Start working !</h1>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="news">
+        <marquee
+          >🎉 Flat 10% off on Your First Order! 🚚 Free Shipping on Orders Above Rs. 500/-</marquee
+        >
+      </div>
+      <div class="navbar">
+        <div class="nav-logo border">
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h3>Anshu Foods</h3>
+          </a>
+        </div>
+        
+        <div class="nav-addr border">
+          <p class="first">Deliver to</p>
+          <div class="addr-icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="second">India</p>
+          </div>
+        </div>
+        <div class="nav-search">
+          <select id="searchSelect" class="search-select">
+            <option value="all">All</option>
+            <option value="namkeen.html">Namkeen</option>
+            <option value="snacks.html">Snacks</option>
+            <option value="sweets.html">Sweets</option>
+            <option value="bakery.html">Diary & Bakery</option>
+            <option value="aftermeal.html">Aftermeal</option>
+            <option value="masale.html">Masale</option>
+            <option value="drinks.html">Drinks</option>
+            <option value="festive.html">Festivals</option>   
+            <option value="regional.html">Regional</option>        
+            <option value="gifting.html">Gifting</option>        
+          </select>
+        
+          <input type="text" placeholder="Search.." class="search-input" id="searchInput" />
+        
+          <div class="search-icon" id="searchIcon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        
+        <div class="nav-sign border">
+          <p>
+            <span> Login / Sign Up</span>
+          </p>
+          <p>
+            <span class="nav-second">My Account</span>
+          </p>
+        </div>
+       
+        <div class="nav-cart border">
+          <a href="cart.html" style="text-decoration: none; color: inherit;">
+            <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+            <span id="cartCount">0</span>
+            <span class="cart-text">Cart</span>
+          </a>
+        </div>
+        
+      </div>
+      <div class="panel">
+        <div class="panel-all">
+          <i class="fa-solid fa-bars" id="openPanel"></i> All
+        </div>
+      
+        <div class="scroll-panel" id="scrollPanel">
+          <button id="closePanel" class="close-btn"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="panel-opt">
+         
+         
+          
+          <a href="namkeen.html">Namkeen
+          </a>
+          <a href="snacks.html">Snacks
+          </a>
+          <a href="sweets.html">Sweets
+          </a>
+          <a href="bakery.html">Diary & Bakery
+          </a>
+          <a href="aftermeal.html">Aftermeal
+          </a>
+          <a href="Masale.html">Masale
+          </a>
+          <a href="drinks.html">Drinks
+          </a>
+          
+         
+          <a href="festive.html">Festivals
+          </a>
+          <a href="regional.html">Regional
+          </a>
+          <a href="gifting.html">Gifting</a>
+        </div>
+      </div>
+    </header>
+    <div class="hero-sec">
+      <video autoplay muted loop class="hero-video">
+          <source src="assets/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <div class="hero-msg">
+          <p>
+              You are on anshufoods.com. You can also shop on AnshuFoods India for millions
+              of products with fast local delivery.
+              <a href="">Click here to go to anshufoods.com</a>
+          </p>
+      </div>
+  </div>
+  
+  <div class="shop-sec"> 
+    <div class="box">
+      <div class="box-content">
+        <h2>Dry Fruits</h2>
+        <p>Rs. 40</p>
+        <div class="box-img" style="background-image: url('assets/eight.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/eight.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+    
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Ghee</h2>
+        <p>Rs. 560</p>
+        <div class="box-img" style="background-image: url('assets/two.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Ghee', 560, 'assets/two.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Namkeen</h2>
+        <p>Rs. 240</p>
+        <div class="box-img" style="background-image: url('assets/three.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Namkeen', 240, 'assets/three.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Papad</h2>
+        <p>Rs. 300</p>
+        <div class="box-img" style="background-image: url('assets/four.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Papad', 300, 'assets/four.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Pasta</h2>
+        <p>Rs. 90</p>
+        <div class="box-img" style="background-image: url('assets/five.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Pasta', 90, 'assets/five.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Cake</h2>
+        <p>Rs. 40</p>
+        <div class="box-img" style="background-image: url('assets/six.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Cake', 40, 'assets/six.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Ice Cream</h2>
+        <p>Rs. 40</p>
+        <div class="box-img" style="background-image: url('assets/seven.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Ice Cream', 40, 'assets/seven.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+    
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Faral</h2>
+        <p>Rs. 240</p>
+        <div class="box-img" style="background-image: url('assets/nine.jpeg')"></div>
+        <button class="btn" onclick="addToCart('Faral', 240, 'assets/nine.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  
+   
+    <div class="box">
+      <div class="box-content">
+        <h2>Milk</h2>
+        <p>Rs. 30</p>
+        <div class="box-img" style="background-image: url('assets/milk.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/milk.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Dahi</h2>
+        <p>Rs. 20</p>
+        <div class="box-img" style="background-image: url('assets/dahi.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/dahi.jpg')">Add to Cart</button>
+      </div>
+    </div> 
+    
+    <div class="box">
+      <div class="box-content">
+        <h2>Yoghurt</h2>
+        <p>Rs. 40</p>
+        <div class="box-img" style="background-image: url('assets/yoghurt.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/yoghurt.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Juices</h2>
+        <p>Rs. 40</p>
+        <div class="box-img" style="background-image: url('assets/juice.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/juice.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Soda</h2>
+        <p>Rs. 50</p>
+        <div class="box-img" style="background-image: url('assets/softdrink.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/softdrink.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Pastries</h2>
+        <p>Rs. 40</p>
+        <div class="box-img" style="background-image: url('assets/pastery.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/pastery.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Cake</h2>
+        <p>Rs. 250</p>
+        <div class="box-img" style="background-image: url('assets/cake.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/cake.jpg')">Add to Cart</button>
+      </div>
+    </div>
+     <div class="box">
+      <div class="box-content">
+        <h2>Faluda</h2>
+        <p>Rs. 140</p>
+        <div class="box-img" style="background-image: url('assets/faluda.jpg')"></div>
+        <button class="btn" onclick="addToCart('Dry Fruits', 40, 'assets/faluda.jpg')">Add to Cart</button>
+      </div>
+    </div> 
+   
+    <div class="box">
+      <div class="box-content">
+        <h2>Sweets</h2>
+        <p>Rs. 240</p>
+        <div class="box-img" style="background-image: url('assets/sweet.jpg')"></div>
+        <button class="btn" onclick="addToCart('Sweets', 240, 'assets/sweet.jpg')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Biscuits</h2>
+        <p>Rs. 200</p>
+        <div class="box-img" style="background-image: url('assets/biscuit.jpg')"></div>
+        <button class="btn" onclick="addToCart('Biscuits', 200, 'assets/biscuit.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Masale</h2>
+        <p>Rs. 400</p>
+        <div class="box-img" style="background-image: url('assets/masale.jpg')"></div>
+        <button class="btn" onclick="addToCart('Masale', 400, 'assets/masale.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="box">
+      <div class="box-content">
+        <h2>Festive Special</h2>
+        <p>Rs. 1100</p>
+        <div class="box-img" style="background-image: url('assets/festive.jpg')"></div>
+        <button class="btn" onclick="addToCart('Festive Special', 1100, 'assets/festive.jpg')">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+  
+  
+    <footer>
+      <div class="footer-container">
+          <div class="footer-left">
+              <h3>Anshu Foods</h3>
+              <p>Welcome to Anshu Foods! Enjoy delicious sweets and treats made with love. Taste the joy in every bite!</p>
+              
+              <h4>Contact:</h4>
+              <p><i class="fas fa-phone"></i>  8373335546</p>
+              <p><i class="fas fa-envelope"></i>  anshu@gmail.com</p>
+  
+              <h4>Follow us:</h4>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f" id="fb" ></i></a>
+                  <a href="#"><i class="fab fa-twitter" id="twt"></i></a>
+                  <a href="#"><i class="fab fa-instagram" id="insta"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in" id="ld"></i></a>
+              </div>
+          </div>
+          
+          <div class="footer-right">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="policy.html">Shipping Policy</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+  <div id="popupMessage" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close">&times;</span>
+      <p id="popupText">Item added to cart!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  </body>
+  
 </html>

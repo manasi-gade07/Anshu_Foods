@@ -1,0 +1,128 @@
+
+/* Container */
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Header */
+.card-header {
+    background-color: #7C0000; /* Using #7C0000 */
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 4px solid #e74c3c; /* Border to enhance */
+}
+
+.card-header i {
+    margin-right: 10px;
+}
+
+/* Card Body */
+.card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-group-item {
+    border: none;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.list-group-item strong {
+    color: #7C0000; /* Using #7C0000 */
+}
+
+/* Alert Section */
+.alert {
+    background-color: #eaf2f8;
+    border-color: #b3d1e6;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.alert-info {
+    color: #555;
+}
+
+.alert-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.alert-info ul li {
+    line-height: 1.6;
+}
+
+.alert-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.alert-info a:hover {
+    text-decoration: underline;
+}
+
+.text-danger {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Emojis in List Items */
+.list-group-item::before {
+    content: "✅";
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Alert Box Emojis */
+.alert-info::before {
+    content: "ℹ️";
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-header {
+        font-size: 1.3rem;
+    }
+
+    .list-group-item {
+        font-size: 1rem;
+    }
+}

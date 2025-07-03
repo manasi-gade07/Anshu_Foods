@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cart - Anshu Foods</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+</head>
+<body>
+  <header>
+    <div class="news">
+      <marquee
+        >🎉 Flat 10% off on Your First Order! 🚚 Free Shipping on Orders Above Rs. 500/-</marquee
+      >
+    </div>
+    <div class="navbar">
+      <div class="nav-logo border">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <h3>Anshu Foods</h3>
+        </a>
+      </div>
+      
+      <div class="nav-addr border">
+        <p class="first">Deliver to</p>
+        <div class="addr-icon">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="second">India</p>
+        </div>
+      </div>
+      <div class="nav-search">
+        <select id="searchSelect" class="search-select">
+          <option value="all">All</option>
+          <option value="namkeen.html">Namkeen</option>
+          <option value="snacks.html">Snacks</option>
+          <option value="sweets.html">Sweets</option>
+          <option value="bakery.html">Diary & Bakery</option>
+          <option value="aftermeal.html">Aftermeal</option>
+          <option value="masale.html">Masale</option>
+          <option value="drinks.html">Drinks</option>
+          <option value="festive.html">Festivals</option>   
+          <option value="regional.html">Regional</option>        
+          <option value="gifting.html">Gifting</option>        
+        </select>
+      
+        <input type="text" placeholder="Search.." class="search-input" id="searchInput" />
+      
+        <div class="search-icon" id="searchIcon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      
+      <div class="nav-sign border">
+        <p>
+          <span> Login / Sign Up</span>
+        </p>
+        <p>
+          <span class="nav-second">My Account</span>
+        </p>
+      </div>
+     
+      <div class="nav-cart border">
+        <a href="cart.html" style="text-decoration: none; color: inherit;">
+          <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
+          <span id="cartCount">0</span>
+          <span class="cart-text">Cart</span>
+        </a>
+      </div>
+      
+    </div>
+    <div class="panel">
+      <div class="panel-all">
+        <i class="fa-solid fa-bars" id="openPanel"></i> All
+      </div>
+    
+      <div class="scroll-panel" id="scrollPanel">
+        <button id="closePanel" class="close-btn"><i class="fa-solid fa-times"></i></button>
+      </div>
+      <div class="panel-opt">
+       
+       
+        
+        <a href="namkeen.html">Namkeen
+        </a>
+        <a href="snacks.html">Snacks
+        </a>
+        <a href="sweets.html">Sweets
+        </a>
+        <a href="bakery.html">Diary & Bakery
+        </a>
+        <a href="aftermeal.html">Aftermeal
+        </a>
+        <a href="Masale.html">Masale
+        </a>
+        <a href="drinks.html">Drinks
+        </a>
+        
+       
+        <a href="festive.html">Festivals
+        </a>
+        <a href="regional.html">Regional
+        </a>
+        <a href="gifting.html">Gifting</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-container" id="cartContainer">
+    <!-- Cart items will be dynamically added here -->
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const container = document.getElementById('cartContainer');
+  
+    if (cart.length === 0) {
+      container.innerHTML = "<p class='empty-cart-message'>Your cart is empty.</p>"; // Added class 'empty-cart-message'
+    } else {
+      // Create the shop-sec div
+      const shopSec = document.createElement('div');
+      shopSec.className = 'shop-sec';
+      
+      // Loop through cart items and create the individual boxes inside shop-sec
+      cart.forEach((item, index) => {
+        const box = document.createElement('div');
+        box.className = 'box';
+  
+        box.innerHTML = `
+          <div class="box-content">
+            <div class="box-img" style="background-image: url('${item.image}')"></div>
+            <h2>${item.name}</h2>
+            <p class="product-price">Rs. ${item.price}</p>
+            <div class="button-container">
+              <button class="btn">Buy Now</button>
+              <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+            </div>
+          </div>
+        `;
+  
+        // Append the box to the shop-sec
+        shopSec.appendChild(box);
+      });
+  
+      // Now, append the shop-sec (which contains all boxes) to the main container
+      container.appendChild(shopSec);
+    }
+  
+    function removeFromCart(index) {
+      cart.splice(index, 1); // Remove item from the cart
+      localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+      location.reload(); // Reload the page to reflect changes
+    }
+  </script>
+  
+  
+</body>
+</html>
